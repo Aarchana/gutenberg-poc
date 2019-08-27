@@ -1,0 +1,14 @@
+@import '../base';
+nav {
+    background-color: #4D4BCA;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    z-index: 10;
+}

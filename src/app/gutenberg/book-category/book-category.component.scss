@@ -1,0 +1,55 @@
+@import '../../../base';
+
+.font-settings {
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.container-fluid {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    background-color: $base-background-color;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    color: white;
+}
+
+h2 {
+    margin-top: 0;
+    padding-top: 100px;
+}
+
+.category {
+    background-color: #4D4BCA;
+    padding: 20px;
+    margin: 15px;
+}
+
+.category-label {
+    text-decoration: none;
+    color: white;
+    @extend .font-settings;
+}
+
+.arrow {
+    @extend .font-settings;
+    float: right;
+}
+
+.mat-icon {
+    height: auto;
+    width: auto;
+    line-height: 0.6;
+}
+
+.header {
+    padding-top: 100px;
+    font-size: 4em;
+    font-family: OldStandardTT;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}

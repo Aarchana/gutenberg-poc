@@ -1,0 +1,32 @@
+<div scrollable (scrollPosition)="scrollHandler($event)" class="listing">
+<div  class="list-container">
+  <div class="search-div">
+    <mat-icon id="arrow-back" (click)="navigateBack()">arrow_back</mat-icon>
+    <mat-form-field >
+      <mat-icon id="search-icon" matPrefix>search</mat-icon>
+      <input matInput placeholder="Search" autocomplete="off" color='accent' id="search" name="userSearchInput" [formControl]="userSearchInput" />
+      <div mat-button *ngIf="userSearchInput?.value" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
+      <mat-icon>close</mat-icon>
+      </div>
+    </mat-form-field>
+  </div>
+  
+  <h2 class="category-name">{{category}}</h2>
+  <div class="center-align">
+    <mat-card class="book_container" (click)="viewDetails(book)" *ngFor="let book of books?.results">
+      <img mat-card-image  class="image_size" [src]="book.formats['image/jpeg']" />
+      <mat-card-content>
+        <div>{{book.title}}</div>
+        <div *ngFor="let author of book.authors">
+          <span>{{author.name}}&nbsp;</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <app-loader [isLoading]="isLoading"></app-loader>
+  <div *ngIf="!isLoading && books?.results?.length == 0">
+    Sorry, no results were found.
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,73 @@
+@import '../../../base';
+
+
+.search-div .mat-form-field {
+    width: 90%;
+}
+
+#search {
+    color: $base-color;
+}
+
+.mat-icon:hover {
+    cursor: pointer;
+}
+
+.list-container {
+    padding-top: 100px;
+}
+
+.mat-form-field-flex {
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+.listing {
+    height: 600px;
+    overflow-y: auto;
+}
+
+.book_container {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    margin: 20px 20px 20px 20px;
+    padding-left: 3%;
+}
+
+.search-div {
+    width: 100%;
+    background-color: $base-background-color;
+    color: $base-color;
+    margin-top: -40px;
+    padding-left: 30px;
+}
+
+.mat-card-content {
+    width: 250px;
+}
+
+.category-name {
+    color: #4D4BCA;
+    margin-left: 20px;
+}
+
+.image_size {
+    width: 250px;
+    height: 250px;
+}
+
+#arrow-back {
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+#search-icon, #arrow-back{
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.center-align {
+    margin-left: auto;
+    margin-right: auto;
+}

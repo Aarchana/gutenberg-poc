@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <div class="header">Gutenberg Project</div>
+
+  <div class="category" *ngFor="let category of categoryList">
+    <a class="category-label" [routerLink]="['/books', category]" >{{category}}
+      <mat-icon class="arrow">arrow_forward</mat-icon>
+    </a>
+  </div>
+</div>
