@@ -27,8 +27,8 @@ export class BooksListComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
-    this.page = 2;
     this.params = new HttpParams().set('mime_type', 'image');
+    this.page = 2; // since for 1st page, API does not take any page param. Initializing it to 2
     this.route.paramMap.pipe(
       switchMap(params => {
         this.isLoading = true;
@@ -133,7 +133,7 @@ export class BooksListComponent implements OnInit, OnDestroy {
     this.books.next = res.next;
     this.books.previous = res.previous;
     this.books.results.push(...res.results)
-    this.page++; 
+    this.page = this.page + 1; 
     return this.books;
   }
 }
